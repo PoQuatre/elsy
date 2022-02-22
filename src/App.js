@@ -1,4 +1,5 @@
 import "./App.css";
+import Steps from "./components/Steps";
 
 const tempMin = -20;
 const tempMax = 40;
@@ -15,6 +16,7 @@ function App() {
         <p>Heart : {heartMin}</p>
         <p>Temperature : {tempMin}</p>
         <p>Steps : {stepsMin}</p>
+        <Steps />
       </div>
     </div>
   );
