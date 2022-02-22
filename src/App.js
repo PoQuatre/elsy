@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/global.css";
 import Steps from "./components/Steps";
 
 const tempMin = -20;
