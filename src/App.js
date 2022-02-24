@@ -27,7 +27,13 @@ class App extends Component {
         <h1 className="text-primary">Hello !</h1>
         <div className="row">
           {/* Water */}
-          <Box icon="local_drink" color="#3a85ff" value={1.5} unit="L" />
+          <Box
+            icon="local_drink"
+            color="#3a85ff"
+            value={1.5}
+            unit="L"
+            hideSlider
+          />
 
           {/* Steps */}
           <Box icon="directions_walk" color="black" value={3000} unit="steps" />
