@@ -1,15 +1,19 @@
-export default function Box(props) {
-  return (
-    <div className="box col-sm-3 col-6">
-      <span
-        className="material-icons"
-        style={{ fontSize: 100, color: props.color }}
-      >
-        {props.icon}
-      </span>
-      <p>
-        {props.value} {props.unit}
-      </p>
-    </div>
-  );
+import { Component } from "react";
+
+export default class Box extends Component {
+  render() {
+    return (
+      <div className="box col-sm-3 col-6">
+        <span
+          className="material-icons"
+          style={{ fontSize: 100, color: this.props.color }}
+        >
+          {this.props.icon}
+        </span>
+        <p>
+          {this.props.value} {this.props.unit}
+        </p>
+      </div>
+    );
+  }
 }
