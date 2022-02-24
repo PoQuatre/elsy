@@ -23,7 +23,7 @@ export default class Box extends Component {
             min={this.props.min}
             max={this.props.max}
             value={this.props.value}
-            onInput={this.props.onInput}
+            onChange={this.props.onChange}
           />
         )}
       </div>

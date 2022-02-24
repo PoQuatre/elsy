@@ -13,18 +13,29 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.setState({
+    this.state = {
       water: 0,
       heart: 120,
-      temperature: -10,
+      temp: -10,
       steps: 3000,
-    });
+    };
   }
+
+  onStepsChange = (e) => {
+    this.setState({ steps: e.target.value });
+  };
+
+  onHeartChange = (e) => {
+    this.setState({ heart: e.target.value });
+  };
+
+  onTempChange = (e) => {
+    this.setState({ temp: e.target.value });
+  };
 
   render() {
     return (
       <div className="container-fluid">
-        <h1 className="text-primary">Hello !</h1>
         <div className="row">
           {/* Water */}
           <Box
@@ -36,13 +47,37 @@ class App extends Component {
           />
 
           {/* Steps */}
-          <Box icon="directions_walk" color="black" value={3000} unit="steps" />
+          <Box
+            icon="directions_walk"
+            color="black"
+            unit="steps"
+            min={stepsMin}
+            max={stepsMax}
+            value={this.state.steps}
+            onChange={this.onStepsChange}
+          />
 
           {/* Heart */}
-          <Box icon="favorite" color="red" value={120} unit="bpm" />
+          <Box
+            icon="favorite"
+            color="red"
+            unit="bpm"
+            min={heartMin}
+            max={heartMax}
+            value={this.state.heart}
+            onChange={this.onHeartChange}
+          />
 
           {/* Temperature */}
-          <Box icon="wb_sunny" color="yellow" value={-10} unit="°C" />
+          <Box
+            icon="wb_sunny"
+            color="yellow"
+            unit="°C"
+            min={tempMin}
+            max={tempMax}
+            value={this.state.temp}
+            onChange={this.onTempChange}
+          />
         </div>
       </div>
     );
