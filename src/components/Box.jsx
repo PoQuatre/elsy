@@ -3,6 +3,7 @@ import { Component } from "react";
 export default class Box extends Component {
   static defaultProps = {
     hideSlider: false,
+    step: 1,
   };
 
   render() {
@@ -20,6 +21,7 @@ export default class Box extends Component {
         {this.props.hideSlider || (
           <input
             type="range"
+            step={this.props.step}
             min={this.props.min}
             max={this.props.max}
             value={this.props.value}

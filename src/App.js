@@ -61,6 +61,7 @@ class App extends Component {
             icon="directions_walk"
             color="black"
             unit="steps"
+            step={1000}
             min={stepsMin}
             max={stepsMax}
             value={this.state.steps}
